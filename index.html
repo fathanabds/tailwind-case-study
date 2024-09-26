@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
@@ -59,8 +59,13 @@
       <div class="container lg:px-32">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2">
-            <h1 class="text-base font-semibold text-primary md:text-xl">Taylor Swift <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl">The Tortured Poets Department</span></h1>
-            <h2 class="font-medium text-secondary text-lg mb-5 mt-3 lg:text-2xl"><a href="https://taylor.lnk.to/thetorturedpoetsdepartment" target="_blank">Available Now</a></h2>
+            <h1 class="text-base font-semibold text-primary md:text-xl">
+              Taylor Swift
+              <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl">The Tortured Poets Department</span>
+            </h1>
+            <h2 class="font-medium text-secondary text-lg mb-5 mt-3 lg:text-2xl">
+              <a href="https://taylor.lnk.to/thetorturedpoetsdepartment" target="_blank">Available Now</a>
+            </h2>
             <p class="font-medium text-secondary mb-10 leading-relaxed">And so I enter into evidence. The tick of love bombs. All's fair in <span class="text-dark">love and poetry.</span></p>
             <a href="" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition-all duration-300 ease-in-out">Sign Up</a>
           </div>
@@ -351,13 +356,21 @@
             </a>
           </div>
           <p class="font-medium text-xs text-primary text-center">
-            Made by <a class="font-bold" target="_blank" href="https://www.linkedin.com/in/fathan-abdul-shodiq/">Fathan Abdul Shodiq</a> using
+            Made by
+            <a class="font-bold" target="_blank" href="https://www.linkedin.com/in/fathan-abdul-shodiq/">Fathan Abdul Shodiq</a>
+            using
             <a href="https://tailwindcss.com/" class="font-bold text-sky-500" target="_blank">Tailwind CSS 3</a>
           </p>
         </div>
       </div>
     </footer>
     <!-- akhir footer -->
+
+    <!-- awal back to top -->
+    <a id="to-top" href="#home" class="hover:animate-pulse rounded-full hidden bottom-4 right-4 p-4 fixed z-[9999] justify-center items-center h-14 w-14 bg-primary">
+      <span class="mt-2 block h-5 w-5 border-t-2 border-l-2 rotate-45"></span>
+    </a>
+    <!-- akhir back to top -->
 
     <!-- <script src="/src/js/script.js"></script> -->
     <script>
@@ -366,10 +379,16 @@
         const header = document.querySelector('header');
         const fixedNav = header.offsetTop;
 
+        const toTop = document.querySelector('#to-top');
+
         if (window.scrollY > fixedNav) {
           header.classList.add('navbar-fixed');
+          toTop.classList.remove('hidden');
+          toTop.classList.add('flex');
         } else {
           header.classList.remove('navbar-fixed');
+          toTop.classList.remove('flex');
+          toTop.classList.add('hidden');
         }
       };
 
@@ -380,6 +399,14 @@
       hamburger.addEventListener('click', function () {
         hamburger.classList.toggle('hamburger-active');
         navMenu.classList.toggle('hidden');
+      });
+
+      // klik di luar hamburger
+      window.addEventListener('click', function (e) {
+        if (e.target != hamburger && e.target != navMenu) {
+          hamburger.classList.remove('hamburger-active');
+          navMenu.classList.add('hidden');
+        }
       });
     </script>
   </body>
