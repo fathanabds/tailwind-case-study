@@ -12,10 +12,10 @@ A web-based Taylor Swift’s static page
 
 ## Features
 
-- View Announcement
-- View Discography
-- View Awards
-- View Tour Dates
+- Announcement
+- Discography
+- Awards
+- Tour Dates
 - Newsletter Sign Up
 
 ## Tech Stack
