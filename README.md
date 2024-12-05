@@ -6,6 +6,10 @@ A web-based Taylor Swift’s static page
 
 - [@fathanabds](https://github.com/fathanabds)
 
+## Deployment
+
+[https://fathanabds.github.io/tailwind-case-study/](https://fathanabds.github.io/tailwind-case-study/)
+
 ## Features
 
 - View Announcement
